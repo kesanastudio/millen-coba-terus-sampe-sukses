@@ -1,229 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Millenia & Fasya - Wedding Invitation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    @import url('https://fontlibrary.org/face/javassoul');
-    
-    @font-face {
-      font-family: 'JavaSoul';
-      src: url('https://fontlibrary.org/assets/fonts/javassoul/e8b6e532b4e0b9e7c9b8a8c8f8e8b6e5/e8b6e532b4e0b9e7c9b8a8c8f8e8b6e5.woff2') format('woff2'),
-           url('https://fontlibrary.org/assets/fonts/javassoul/e8b6e532b4e0b9e7c9b8a8c8f8e8b6e5/e8b6e532b4e0b9e7c9b8a8c8f8e8b6e5.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millenia & Fasya - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'JavaSoul';
+            src: url('https://fonts.cdnfonts.com/css/java-soul') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Quicksand', sans-serif;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .background {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-image: url('https://i.imgur.com/10l2EGB.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.7);
-      z-index: -2;
-    }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.imgur.com/10l2EGB.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.7);
+            z-index: -2;
+        }
 
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
-      z-index: -1;
-    }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+            z-index: -1;
+        }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-    .invitation-header {
-      color: white;
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      opacity: 0.9;
-    }
+        .invitation-header {
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
 
-    .couple-names {
-      font-family: 'JavaSoul', cursive;
-      font-size: 4rem;
-      color: white;
-      margin: 30px 0;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-      line-height: 1.2;
-    }
+        .couple-names {
+            font-family: 'JavaSoul', cursive;
+            font-size: 4rem;
+            color: white;
+            margin: 30px 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
 
-    .ampersand {
-      font-size: 3rem;
-      margin: 0 15px;
-      opacity: 0.8;
-    }
+        .ampersand {
+            font-size: 3rem;
+            margin: 0 15px;
+            opacity: 0.8;
+        }
 
-    .guest-section {
-      margin: 40px 0;
-      padding: 30px;
-    }
+        .guest-section {
+            margin: 40px 0;
+            padding: 30px;
+        }
 
-    .guest-label {
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      opacity: 0.8;
-    }
+        .guest-label {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
 
-    .guest-name {
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 600;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    }
+        .guest-name {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
 
-    .invitation-message {
-      color: white;
-      font-size: 1rem;
-      font-weight: 300;
-      opacity: 0.9;
-      line-height: 1.6;
-      margin: 30px 0;
-      max-width: 400px;
-    }
+        .invitation-message {
+            color: white;
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin: 30px 0;
+            max-width: 400px;
+        }
 
-    .open-invitation-btn {
-      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
-      border: 2px solid rgba(255,255,255,0.3);
-      color: white;
-      padding: 18px 40px;
-      border-radius: 50px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
+        .open-invitation-btn {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
 
-    .open-invitation-btn:hover {
-      background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.2));
-      border-color: rgba(255,255,255,0.5);
-      transform: translateY(-3px);
-    }
+        .open-invitation-btn:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
 
-    .decorative-line {
-      width: 100px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-      margin: 20px auto;
-    }
+        .decorative-line {
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            margin: 20px auto;
+        }
 
-    /* Animation */
-    .container > * {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
-    }
-    .invitation-header { animation-delay: 0.2s; }
-    .couple-names { animation-delay: 0.4s; }
-    .decorative-line { animation-delay: 0.6s; }
-    .guest-section { animation-delay: 0.8s; }
-    .invitation-message { animation-delay: 1s; }
-    .open-invitation-btn { animation-delay: 1.2s; }
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+        .floating-element {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.3; }
+        }
+
+        .element-1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .element-2 { top: 60%; right: 15%; animation-delay: 2s; }
+        .element-3 { bottom: 30%; left: 20%; animation-delay: 4s; }
+        .element-4 { top: 40%; right: 25%; animation-delay: 1s; }
+
+        /* Tablet styles */
+        @media (max-width: 1024px) {
+            .couple-names {
+                font-size: 3.5rem;
+            }
+            
+            .ampersand {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+
+        /* Mobile landscape and small tablets */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 2.8rem;
+            }
+            
+            .ampersand {
+                font-size: 2.2rem;
+                margin: 0 10px;
+            }
+            
+            .guest-name {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .guest-section {
+                padding: 20px;
+                margin: 30px 0;
+            }
+            
+            .invitation-message {
+                font-size: 0.95rem;
+                max-width: 350px;
+            }
+            
+            .open-invitation-btn {
+                padding: 16px 35px;
+                font-size: 1rem;
+            }
+            
+            .floating-element {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Mobile portrait */
+        @media (max-width: 480px) {
+            .couple-names {
+                font-size: 2.2rem;
+                margin: 20px 0;
+            }
+            
+            .ampersand {
+                font-size: 1.8rem;
+                margin: 0 8px;
+            }
+            
+            .invitation-header {
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+            }
+            
+            .guest-section {
+                margin: 25px 0;
+                padding: 15px;
+            }
+            
+            .guest-name {
+                font-size: 1.4rem;
+            }
+            
+            .guest-label {
+                font-size: 0.8rem;
+                margin-bottom: 12px;
+            }
+            
+            .invitation-message {
+                font-size: 0.9rem;
+                max-width: 300px;
+                margin: 25px 0;
+            }
+            
+            .open-invitation-btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                margin-top: 15px;
+            }
+            
+            .decorative-line {
+                width: 80px;
+                margin: 15px auto;
+            }
+            
+            .floating-element {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 360px) {
+            .couple-names {
+                font-size: 1.9rem;
+            }
+            
+            .ampersand {
+                font-size: 1.5rem;
+                margin: 0 5px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .invitation-message {
+                max-width: 280px;
+                font-size: 0.85rem;
+            }
+            
+            .open-invitation-btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Large desktop screens */
+        @media (min-width: 1200px) {
+            .couple-names {
+                font-size: 4.5rem;
+            }
+            
+            .ampersand {
+                font-size: 3.5rem;
+            }
+            
+            .invitation-header {
+                font-size: 1.1rem;
+            }
+            
+            .guest-name {
+                font-size: 2rem;
+            }
+            
+            .invitation-message {
+                font-size: 1.1rem;
+                max-width: 450px;
+            }
+            
+            .open-invitation-btn {
+                padding: 20px 45px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Elegant entrance animation */
+        .container > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .invitation-header { animation-delay: 0.2s; }
+        .couple-names { animation-delay: 0.4s; }
+        .decorative-line { animation-delay: 0.6s; }
+        .guest-section { animation-delay: 0.8s; }
+        .invitation-message { animation-delay: 1s; }
+        .open-invitation-btn { animation-delay: 1.2s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="overlay"></div>
-
-  <div class="container">
-    <div class="invitation-header">Wedding Invitation</div>
-    <div class="couple-names">
-      Millenia <span class="ampersand">&</span> Fasya
+    <div class="background"></div>
+    <div class="overlay"></div>
+    
+    <div class="floating-elements">
+        <div class="floating-element element-1">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+        </div>
+        <div class="floating-element element-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="12" cy="12" r="1"/>
+            </svg>
+        </div>
+        <div class="floating-element element-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+        </div>
+        <div class="floating-element element-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l2.09 6.26L20 10l-4.91 4.87L16.18 21 12 18.27 7.82 21l1.09-6.13L4 10l5.91-1.74L12 2z"/>
+            </svg>
+        </div>
     </div>
-    <div class="decorative-line"></div>
 
-    <div class="guest-section">
-      <div class="guest-label">Kepada Yth.</div>
-      <div class="guest-name" id="guestName">Bapak/Ibu/Saudara/i</div>
+    <div class="container">
+        <div class="invitation-header">Wedding Invitation</div>
+        
+        <div class="couple-names">
+            Millenia <span class="ampersand">&</span> Fasya
+        </div>
+        
+        <div class="decorative-line"></div>
+        
+        <div class="guest-section">
+            <div class="guest-label">Kepada Yth.</div>
+            <div class="guest-name" id="guestName">Bapak/Ibu/Saudara/i</div>
+        </div>
+        
+        <div class="invitation-message">
+            Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir dalam acara pernikahan kami
+        </div>
+        
+        <a href="#" class="open-invitation-btn" id="openInvitationBtn">
+            Buka Undangan
+        </a>
     </div>
 
-    <div class="invitation-message">
-      Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir dalam acara pernikahan kami
-    </div>
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
 
-    <a href="#" class="open-invitation-btn" id="openInvitationBtn">Buka Undangan</a>
-  </div>
+        // Function to set guest name from URL parameter
+        function setGuestName() {
+            const guestName = getUrlParameter('nama') || getUrlParameter('name') || getUrlParameter('tamu');
+            const guestNameElement = document.getElementById('guestName');
+            
+            if (guestName && guestName.trim() !== '') {
+                // Capitalize first letter of each word
+                const formattedName = guestName.split(' ')
+                    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                    .join(' ');
+                guestNameElement.textContent = formattedName;
+            } else {
+                guestNameElement.textContent = 'Bapak/Ibu/Saudara/i';
+            }
+        }
 
-  <script>
-    // Get URL parameter
-    function getUrlParameter(name) {
-      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-      var results = regex.exec(location.search);
-      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+        // Function to set invitation link
+        function setInvitationLink() {
+            const invitationBtn = document.getElementById('openInvitationBtn');
+            const currentUrl = window.location.href;
+            const baseUrl = currentUrl.split('?')[0]; // Remove existing parameters
+            
+            // You can customize this URL to point to your main invitation page
+            // For now, it will reload the same page but you can change it to your invitation URL
+            const invitationUrl = getUrlParameter('https://kesanastudio.my.canva.site/millionstepswithfasya') || '#invitation';
+            
+            invitationBtn.href = invitationUrl;
+        }
 
-    // Set guest name
-    function setGuestName() {
-      const guestName = getUrlParameter("nama") || getUrlParameter("name") || getUrlParameter("tamu");
-      const guestNameElement = document.getElementById("guestName");
-      if (guestName && guestName.trim() !== "") {
-        const formattedName = guestName.split(" ")
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-          .join(" ");
-        guestNameElement.textContent = formattedName;
-      }
-    }
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            setGuestName();
+            setInvitationLink();
+        });
 
-    // Set invitation link
-    function setInvitationLink() {
-      const invitationBtn = document.getElementById("openInvitationBtn");
-      const invitationUrl = getUrlParameter("https://kesanastudio.my.canva.site/millionstepswithfasya/") || "#";
-      invitationBtn.href =https://kesanastudio.my.canva.site/millionstepswithfasya/;
-    }
-    <!-- Elfsight Background Music | Juicy Luicy -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-927c3750-338a-42a8-92d9-0d35509aa588" data-elfsight-app-lazy></div>
+        // Handle invitation button click
+        document.getElementById('openInvitationBtn').addEventListener('click', function(e) {
+            if (this.href === '#invitation' || this.href.endsWith('#invitation')) {
+                e.preventDefault();
+                alert('Silakan ganti parameter "link" di URL dengan link undangan digital Anda.\n\nContoh: ?nama=John Doe&link=https://your-invitation-url.com');
+            }
+        });
 
-    window.addEventListener("load", function() {
-      setGuestName();
-      setInvitationLink();https://kesanastudio.my.canva.site/millionstepswithfasya
-    });
-  </script>
-</body>
+        // Add some interactive effects
+        document.addEventListener('mousemove', function(e) {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            floatingElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                
+                element.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9797787b5293df8f',t:'MTc1NjkyNTgyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
